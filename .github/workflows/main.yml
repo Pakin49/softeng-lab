@@ -1,0 +1,17 @@
+name: Publish Node Docker
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubunU-latest
+    steps:
+    - uses: action/checkout@v1
+    - name: Bulid & Push Image
+      run:
+        echo "${{secrets.DOCKERPASSWORD }}" | docker login -u "${{secrets.DOCKERUSERNAME }}" --password-stdin
+        docker image build -t "${{ secret.DOCKERUSERNAME }}/softeng-lab:latest"
+        docker push "${{ secret.DOCKERUSERNAME }}/softeng-lab:latest"
