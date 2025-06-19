@@ -1,0 +1,7 @@
+npm install express
+node app.js
+
+#after the command 
+nmp init -y
+npm install express
+docker bulid -t nodedocker .

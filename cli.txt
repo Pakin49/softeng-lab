@@ -1,0 +1,8 @@
+npm install express
+node app.js
+
+#Docker
+npm init -y
+npm install express
+dockrer bulid -t nodedocker .
+docker run -d -p 3000:3000 --name node-app nodedocker
