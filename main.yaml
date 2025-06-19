@@ -13,5 +13,5 @@ jobs:
     - name: Build & Push Image
       run: |
         echo "${{ secrets.DOCKERPASSWORD }}" | docker login -u "${{ secrets.DOCKERUSERNAME }}" --password-stdin
-        docker image build -t "${{ secrets.DOCKERUSERNAME }}/softeng-lab:latest" .  # Added '.' for build context
-        docker push "${{ secrets.DOCKERUSERNAME }}/softeng-lab:latest"
+        docker image build -t "${{ secrets.DOCKERUSERNAME }}Pakin49/softeng-lab:latest" .  # Added '.' for build context
+        docker push "${{ secrets.DOCKERUSERNAME }}Pakin49/softeng-lab:latest"
