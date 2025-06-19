@@ -13,5 +13,5 @@ jobs:
     - name: Bulid & Push Image
       run:
         echo "${{secrets.DOCKERPASSWORD }}" | docker login -u "${{secrets.DOCKERUSERNAME }}" --password-stdin
-        docker image build -t "${{ secret.DOCKERUSERNAME }}/softeng-lab:latest"
-        docker push "${{ secret.DOCKERUSERNAME }}/softeng-lab:latest"
+        docker image build -t "${{ secrets.DOCKERUSERNAME }}/softeng-lab:latest"
+        docker push "${{ secrets.DOCKERUSERNAME }}/softeng-lab:latest"
